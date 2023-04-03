@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Clinica Odontologica - Busqueda</title>
+
+    <title>Clinica Odontologica - Busqueda/Edición</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -11,19 +12,31 @@
     <script type="text/javascript" src="/js/get_student.js"></script>
     <script type="text/javascript" src="/js/put_student.js"></script>
     <script type="text/javascript" src="/js/delete_student.js"></script>
+    <link rel="stylesheet" href="styles/views.css">
+
 </head>
+
 <body>
 <div class="container">
-    <ul class="nav nav-pills">
+    <!--<ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link" href="/">Registrar odontologo</a>
         </li>
         <li class="nav-item">
+            
             <a class="nav-link" href="/busquedaOdontologo.html/">Todas</a>
         </li>
-    </ul>
+    </ul>-->
 
-    <div id="div_student_table">
+    <nav>
+        
+        <button id="inicio_btn" class="btn">Inicio</button>
+        
+        <button id="odontologos_btn" class="btn">Registrar odontologo</button>
+    
+    </nav>
+
+    <div id="div_student_table" class="menu">
         <h1>Estudiantes</h1>
         <div class="row col-md-6 table-responsive">
             <table id="studentTable" class="table table-striped">
@@ -67,5 +80,8 @@
     </div>
     <hr>
 </div>
+
+    <script src="js/botones.js"></script>
+
 </body>
 </html>
