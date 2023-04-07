@@ -19,13 +19,15 @@ import java.util.Set;
 public class Paciente {
 
     @Id
-    @SequenceGenerator(name = "paciente_sequence", sequenceName = "paciente_sequence")
+    @SequenceGenerator(name = "paciente_sequence", sequenceName = "paciente_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "paciente_sequence")
     private Long id;
     private String nombre;
     private String apellido;
     private int dni;
     private LocalDate fechaIngreso;
+
+    private String visible = "1";
 
     @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
     @JsonIgnore

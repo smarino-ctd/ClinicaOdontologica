@@ -6,6 +6,7 @@ import com.sebam.ClinicaOdontologica_Spring.entity.dto.OdontologoDTO;
 import com.sebam.ClinicaOdontologica_Spring.repository.IOdontologoRepository;
 import com.sebam.ClinicaOdontologica_Spring.service.IOdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

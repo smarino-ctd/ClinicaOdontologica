@@ -14,5 +14,6 @@ public class PacienteDTO {
     private String apellido;
     private int dni;
     private LocalDate fechaIngreso;
+    private String visible = "1";
 
 }

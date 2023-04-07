@@ -1,7 +1,9 @@
 package com.sebam.ClinicaOdontologica_Spring.controller;
 
 import com.sebam.ClinicaOdontologica_Spring.entity.dto.OdontologoDTO;
+import com.sebam.ClinicaOdontologica_Spring.exceptions.NotFoundException;
 import com.sebam.ClinicaOdontologica_Spring.service.IOdontologoService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,8 @@ import java.util.Collection;
 @RequestMapping("/odontologos")
 public class OdontologoController {
 
+    private final static Logger log = Logger.getLogger(OdontologoController.class);
+
     @Autowired
     IOdontologoService odontologoService;
 
@@ -21,12 +25,14 @@ public class OdontologoController {
 
         odontologoService.registrarOdontologo(odontologo);
 
+        log.info("Odontologo registrado correctamente");
+
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @GetMapping("/buscar/{id}")
-    public OdontologoDTO buscarOdontologo(@PathVariable Long id){
+    public OdontologoDTO buscarOdontologo(@PathVariable Long id) throws NotFoundException {
 
         return odontologoService.listarOdontologo(id);
 
@@ -37,16 +43,29 @@ public class OdontologoController {
 
         odontologoService.modificarOdontologo(odontologo);
 
+        log.info("Odontolo modificado existosamente");
+
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
-    @DeleteMapping("/eliminar/{id}")
+    /*@DeleteMapping("/eliminar/{id}")
     public ResponseEntity<?> eliminarOdontologo(@PathVariable Long id){
 
         odontologoService.eliminarOdontologo(id);
 
         return (ResponseEntity<?>) ResponseEntity.status(HttpStatus.OK);
+
+    }*/
+
+    @PutMapping("/eliminar")
+    public ResponseEntity<?> eliminarOdontologo(@RequestBody OdontologoDTO odontologo){
+
+        odontologoService.modificarOdontologo(odontologo);
+
+        log.info("Odontolo eliminado existosamente");
+
+        return ResponseEntity.ok(HttpStatus.OK);
 
     }
 

@@ -1,0 +1,97 @@
+/* ---------- MAIN --------- */
+
+    main{
+
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        height: 60%;
+        background-color: transparent;
+        margin:0rem;
+
+    }
+
+        #listado{
+
+            width:50%;
+            height: 100%;
+            background-color: rgba(246, 229, 207, 1);
+            border-radius:0.625rem;
+            padding: 3rem;
+            overflow-y: scroll;
+
+        }
+
+        #update_form{
+
+            width:35%;
+            height: 100%;
+            background-color: rgba(246, 229, 207, 1);
+            border-radius:0.625rem;
+            padding: 3rem;
+            overflow-y: scroll;
+
+        }
+
+            .hidden{
+
+                visibility: hidden;
+
+            }
+
+            #formulario_alta{
+
+
+                overflow-x: hidden;
+
+            }
+
+            #id{
+
+                width: 5%;
+                background-color: black;
+                font-weight: bold;
+                color:rgba(246, 229, 207, 1);
+
+            }
+
+
+
+
+/* -------- TABLA -------- */
+
+    table{
+
+        width: 100%;
+        margin-top:2rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+    }
+
+    table tr{
+
+        border:1px dashed black;
+
+    }
+
+    table th{
+
+        font-size: 1.5rem;
+        padding:0.5rem;
+
+    }
+
+    .celda_destacada{
+
+        background-color: black;
+        color:rgba(246, 229, 207, 1);
+        border-radius: 10px;
+
+    }
+
+    .click{
+
+        cursor:pointer
+
+    }

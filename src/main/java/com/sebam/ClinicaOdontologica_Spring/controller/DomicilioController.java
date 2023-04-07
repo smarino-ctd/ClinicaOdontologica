@@ -2,6 +2,9 @@ package com.sebam.ClinicaOdontologica_Spring.controller;
 
 import com.sebam.ClinicaOdontologica_Spring.entity.dto.DomicilioDTO;
 import com.sebam.ClinicaOdontologica_Spring.service.IDomicilioService;
+
+
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,9 +12,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
+
 @RestController
 @RequestMapping("/domicilios")
 public class DomicilioController {
+
+    private final static Logger log = Logger.getLogger(DomicilioController.class);
 
     @Autowired
     IDomicilioService DomicilioService;

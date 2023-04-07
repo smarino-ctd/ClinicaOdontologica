@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class Turno {
 
     @Id
-    @SequenceGenerator(name = "turno_sequence", sequenceName = "turno_sequence")
+    @SequenceGenerator(name = "turno_sequence", sequenceName = "turno_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "turno_sequence")
     Long id;
     private LocalDate fechaHora;

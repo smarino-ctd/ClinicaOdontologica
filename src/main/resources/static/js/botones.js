@@ -1,63 +1,61 @@
-    // Captura de botones
-    
-        const home_btn = document.querySelector("#inicio_btn")
-        const guardar_btn = document.querySelector("#odontologos_btn")
-        const editar_btn = document.querySelector("#buscar_btn")
-        const pacientes_btn = document.querySelector("#pacientes_btn")
-        const turnos_btn = document.querySelector("#turnos_btn")
+// Captura de botones
 
-    // Botón que redirige a la home
+    const home_btn = document.querySelector("#home_btn")
+    const paciente_btn = document.querySelector("#pacientes_btn")
+    const turno_btn = document.querySelector("#turnos_btn")
+    const guardar_odontologo = document.querySelector("#guardar_odontologo")
+    const listar_odontologos = document.querySelector("#lista_odontologos")
 
-        if(home_btn != null){
+// Eventos de botones
 
-            home_btn.addEventListener("click", () => {
+    if(home_btn != null){
 
-                window.location.href = "index.html";
+        home_btn.addEventListener("click", () => {
 
-            })
-        
-        }
-    
-    // Botón que redirige a registrar odontologo
+            window.location.href = "index.html"
 
-        if(guardar_btn != null){
-
-            guardar_btn.addEventListener("click", () => {
-
-                window.location.href = "altaOdontologo.html";
-
-            })
-        
-        }   
-
-    // Botón que redirige a buscar/editar odontologo
-
-        if(editar_btn != null){
-
-            editar_btn.addEventListener("click", () => {
-
-                window.location.href = "busquedaOdontologo.html";
-
-            })
-        
-        } 
-        
-    // Botones inactivos
-
-    const sinFuncion = () => {
-
-        alert("Funcion no implementada")
+        })
 
     }
 
-    if(pacientes_btn != null){
+    if(paciente_btn != null){
 
-        pacientes_btn.addEventListener("click", sinFuncion)
+        paciente_btn.addEventListener("click", () => {
+
+            window.location.href = "altaPaciente.html"
+
+        })
 
     }
 
-    if(turnos_btn != null){
+    if(turno_btn != null){
 
-        turnos_btn.addEventListener("click", sinFuncion)
+        turno_btn.addEventListener("click", () => {
+
+            window.location.href = "altaTurnos.html"
+
+
+        })
+
+    }
+
+    if(guardar_odontologo != null){
+
+        guardar_odontologo.addEventListener("click", () => {
+
+            window.location.href = "altaOdontologo.html"
+
+
+        })
+
+    }
+
+    if(listar_odontologos != null){
+
+        listar_odontologos.addEventListener("click", () => {
+
+            window.location.href = "listaOdontologos.html"
+
+        })
 
     }

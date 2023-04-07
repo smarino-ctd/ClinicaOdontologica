@@ -1,6 +1,7 @@
 package com.sebam.ClinicaOdontologica_Spring.service;
 
 import com.sebam.ClinicaOdontologica_Spring.entity.dto.DomicilioDTO;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
