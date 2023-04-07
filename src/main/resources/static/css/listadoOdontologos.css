@@ -1,0 +1,34 @@
+/* -------- TABLA -------- */
+
+    table{
+
+        margin-top:2rem;
+
+    }
+
+    table tr{
+
+        border:1px dashed black;
+
+    }
+
+    table th{
+
+        font-size: 1.5rem;
+        padding:0.5rem;
+
+    }
+
+    .celda_destacada{
+
+        background-color: black;
+        color:rgba(246, 229, 207, 1);
+        border-radius: 10px;
+
+    }
+
+    .click{
+
+        cursor:pointer
+
+    }
